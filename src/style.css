@@ -1,0 +1,48 @@
+:root {
+  --clr-reaction: hsl(0, 100%, 67%);
+  --bg-reaction: hsla(0, 100%, 67%, 0.5);
+  --clr-memory: hsl(39, 100%, 56%);
+  --bg-memory: hsla(39, 100%, 56%, 0.5);
+  --clr-verbal: hsl(166, 100%, 37%);
+  --bg-verbal: hsla(166, 100%, 37%, 0.5);
+  --clr-visual: hsl(234, 85%, 45%);
+  --bg-visual: hsla(234, 85%, 45%, 0.5);
+  --card-bg-gradient: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  --circle-bg-gradient: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  --bg-primary: hsl(0, 0%, 100%);
+  --bg-secondary: hsl(221, 100%, 96%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(241, 100%, 89%);
+  --bg-button: hsl(224, 30%, 27%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-block-size: 100svh;
+  display: grid;
+  place-items: center;
+}
+footer.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  display: grid;
+}
