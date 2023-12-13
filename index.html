@@ -6,15 +6,13 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+      href="./assets/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <title>Frontend Mentor | Results summary component</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
@@ -22,10 +20,7 @@
     <main>
       <div class="result">
         <h1>Your Result</h1>
-        <div class="average" data-result-avg>
-          <strong>76</strong>
-          <span>of 100</span>
-        </div>
+        <div class="average" data-result-avg></div>
         <div class="remarks">
           <h2>Great</h2>
           <p>
@@ -35,28 +30,7 @@
       </div>
       <div class="summary">
         <h3>Summary</h3>
-        <ul>
-          <li style="--_clr: hsl(0, 100%, 67%)">
-            <img src="/public/assets/images/icon-reaction.svg" alt="Reaction" />
-            <span>Reaction</span>
-            <span data-marks><strong>80</strong> / 100</span>
-          </li>
-          <li style="--_clr: hsl(39, 100%, 56%)">
-            <img src="/public/assets/images/icon-memory.svg" alt="Memory" />
-            <span>Memory</span>
-            <span data-marks><strong>92</strong> / 100</span>
-          </li>
-          <li style="--_clr: hsl(166, 100%, 37%)">
-            <img src="/public/assets/images/icon-verbal.svg" alt="Verbal" />
-            <span>Verbal</span>
-            <span data-marks><strong>61</strong> / 100</span>
-          </li>
-          <li style="--_clr: hsl(234, 85%, 45%)">
-            <img src="/public/assets/images/icon-visual.svg" alt="Visual" />
-            <span>Visual</span>
-            <span data-marks><strong>72</strong> / 100</span>
-          </li>
-        </ul>
+        <ul data-marks-list></ul>
         <button>Continue</button>
       </div>
     </main>

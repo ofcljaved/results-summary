@@ -23,8 +23,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
-
 html {
   font-family: "Hanken Grotesk", sans-serif;
 }
@@ -164,10 +164,15 @@ main {
   margin-block: 0.25rem;
   cursor: pointer;
 }
-.summary button:hover,
+/* .summary button:hover, */
 .summary button:active,
 .summary button:focus-visible {
   background-image: var(--card-bg-gradient);
+}
+@media (width > 425px) {
+  .summary button:hover {
+    background-image: var(--card-bg-gradient);
+  }
 }
 
 .summary ul {
