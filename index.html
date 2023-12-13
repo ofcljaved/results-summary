@@ -17,21 +17,25 @@
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <main>
-      <div class="result">
-        <h1>Your Result</h1>
-        <div class="average" data-result-avg></div>
-        <div class="remarks">
+    <main aria-live="polite">
+      <div class="result" role="region" aria-labelledby="result-heading">
+        <h1 id="result-heading">Your Result</h1>
+        <div
+          class="average"
+          data-result-avg
+          aria-live="assertive"
+          aria-atomic="true"></div>
+        <div class="remarks" role="status">
           <h2>Great</h2>
           <p>
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
       </div>
-      <div class="summary">
-        <h3>Summary</h3>
+      <div class="summary" role="region" aria-labelledby="summary-heading">
+        <h3 id="summary-heading">Summary</h3>
         <ul data-marks-list></ul>
-        <button>Continue</button>
+        <button aria-label="Continue">Continue</button>
       </div>
     </main>
 
