@@ -26,7 +26,7 @@
 }
 
 html {
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 body {
@@ -37,7 +37,7 @@ body {
 }
 footer.attribution {
   position: absolute;
-  bottom: 0.5brem;
+  bottom: 0.5rem;
   font-size: 0.7rem;
   text-align: center;
 }
@@ -48,7 +48,16 @@ main {
   display: grid;
   grid-template-rows: max-content auto;
 }
-
+@media (width > 425px) {
+  main {
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    max-width: 45rem;
+    box-shadow: 0px 30px 50px hsla(241, 81%, 54%, 0.1);
+    border-radius: 2rem;
+  }
+}
 .result {
   background-image: var(--card-bg-gradient);
   color: var(--text-secondary);
@@ -59,10 +68,22 @@ main {
   gap: 1.5rem;
   padding: 1.5rem;
 }
-
+@media (width > 425px) {
+  .result {
+    border-radius: 2rem;
+    padding: 2.5rem;
+    gap: 2.5rem;
+  }
+}
 .result h1 {
   margin: 0;
   font-size: 1.125rem;
+}
+@media (width > 425px) {
+  .result h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 }
 
 .result .average {
@@ -74,23 +95,41 @@ main {
   width: 8.75rem;
   aspect-ratio: 1;
 }
+@media (width > 425px) {
+  .result .average {
+    width: 12.25rem;
+  }
+}
 .result .average > :first-child {
   color: var(--text-primary);
   font-size: 3.375rem;
 }
-
+@media (width > 425px) {
+  .result .average > :first-child {
+    font-size: 4.2rem;
+  }
+}
 .result .remarks {
   text-align: center;
   width: 30ch;
+}
+@media (width > 425px) {
+  .result .remarks {
+    width: 25ch;
+  }
 }
 .result .remarks > * {
   margin-block-start: 0;
 }
 .result .remarks > :first-child {
-  margin-block-end: 0.5625rem;
+  margin-block-end: 0.375em;
   color: var(--text-primary);
 }
-
+@media (width > 425px) {
+  .result .remarks > :first-child {
+    font-size: 2rem;
+  }
+}
 .summary {
   display: grid;
   padding-inline: 2rem;
@@ -98,9 +137,20 @@ main {
   gap: 1.125rem;
   grid-template-rows: max-content auto max-content;
 }
+@media (width > 425px) {
+  .summary {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+}
 
 .summary h3 {
   margin-block: 0;
+}
+@media (width > 425px) {
+  .summary h3 {
+    font-size: 1.5rem;
+  }
 }
 
 .summary button {
@@ -112,6 +162,12 @@ main {
   padding: 1em;
   border-radius: 100rem;
   margin-block: 0.25rem;
+  cursor: pointer;
+}
+.summary button:hover,
+.summary button:active,
+.summary button:focus-visible {
+  background-image: var(--card-bg-gradient);
 }
 
 .summary ul {
@@ -136,7 +192,12 @@ main {
     transparent
   );
 }
-
+@media (width > 425px) {
+  .summary ul > * {
+    font-size: 1.12rem;
+    font-weight: 700;
+  }
+}
 .summary ul li [data-marks] > :first-child {
   color: initial;
 }
