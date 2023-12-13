@@ -33,7 +33,7 @@ const updateMarks = (data: Marks[]) => {
 
 async function fetchMarks() {
   try {
-    const res = await fetch("./src/data.json");
+    const res = await fetch("/data.json");
     const data: Marks[] = await res.json();
     updateMarks(data);
   } catch (error: any) {
