@@ -26,7 +26,7 @@
 }
 
 html {
-  font-family: "Hanken Grotesk", sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 
 body {
@@ -37,12 +37,109 @@ body {
 }
 footer.attribution {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5brem;
   font-size: 0.7rem;
   text-align: center;
 }
 
 main {
   height: 100%;
+  width: 100%;
   display: grid;
+  grid-template-rows: max-content auto;
+}
+
+.result {
+  background-image: var(--card-bg-gradient);
+  color: var(--text-secondary);
+  border-radius: 0px 0px 2rem 2rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.result h1 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.result .average {
+  background-image: var(--circle-bg-gradient);
+  border-radius: 50%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 8.75rem;
+  aspect-ratio: 1;
+}
+.result .average > :first-child {
+  color: var(--text-primary);
+  font-size: 3.375rem;
+}
+
+.result .remarks {
+  text-align: center;
+  width: 30ch;
+}
+.result .remarks > * {
+  margin-block-start: 0;
+}
+.result .remarks > :first-child {
+  margin-block-end: 0.5625rem;
+  color: var(--text-primary);
+}
+
+.summary {
+  display: grid;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  gap: 1.125rem;
+  grid-template-rows: max-content auto max-content;
+}
+
+.summary h3 {
+  margin-block: 0;
+}
+
+.summary button {
+  border: none;
+  outline: none;
+  background-color: var(--bg-button);
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  padding: 1em;
+  border-radius: 100rem;
+  margin-block: 0.25rem;
+}
+
+.summary ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 1rem;
+}
+.summary ul > * {
+  display: grid;
+  grid-template-columns: max-content auto max-content;
+  gap: 0.75rem;
+  padding-inline: 1rem;
+  align-items: center;
+  color: var(--_clr);
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--_clr);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.95) 100%,
+    transparent
+  );
+}
+
+.summary ul li [data-marks] > :first-child {
+  color: initial;
+}
+.summary ul li [data-marks] {
+  color: gray;
 }
